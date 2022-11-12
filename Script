@@ -26,24 +26,18 @@ local MainWindow = Rayfield:CreateWindow({
 	}
 })
 local MainTab = MainWindow:CreateTab("Main", 4483362458) -- Title, Image
-local MainSection = Tab:CreateSection("Main")
-Rayfield:Notify({
-    Title = "Thank you for using Pengu Hub!",
-    Content = "If you want to become a part of the community or have any feedback, make sure to join the discord!",
-    Duration = 6.5,
-    Image = 4483362458,
-    Actions = { -- Notification Buttons
-        Ignore = {
-            Name = "Okay!",
-            Callback = function()
-                print("The user tapped Okay!")
-            end
-		},
-	},
-})
+local MainSection = MainTab:CreateSection("Main")
 local Button = MainTab:CreateButton({
-	Name = "(Insert Something to go here)",
-	Callback = function()
-		-- The function that takes place when the button is pressed
+	Name = "Neon Tinter",
+	Callback = local carIsNeon = game:GetService("Workspace").Vehicles.Tinter.Color.Union.Material == "Neon"
+ 
+repeatLoop = true
+
+if repeatLoop == true then
+    repeat
+    workspace.Plots.Plot2.Objects:FindFirstChild("Tinter Spawner").Hitbox.Interact:FireServer()
+    wait(0.1)
+    until carIsNeon
+end
 	end,
 })
