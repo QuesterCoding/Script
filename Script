@@ -19,7 +19,7 @@ local MainWindow = Rayfield:CreateWindow({
 		Subtitle = "Key System",
 		Note = "Join the discord (discord.gg/T5ww6Xb8hJ)",
 		FileName = "PenguKey",
-		SaveKey = true,
+		SaveKey = false,
 		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
 		Key = "Release"
 	}
