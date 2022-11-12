@@ -1,16 +1,15 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-
 local MainWindow = Rayfield:CreateWindow({
-	Name = "Main",
-	LoadingTitle = "Booting up the Penguin",
-	LoadingSubtitle = "by Classy#6902",
+	Name = "Main Window",
+	LoadingTitle = "Fluffing up the Penguin",
+	LoadingSubtitle = "by Pengu#6902",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = nil, -- Create a custom folder for your hub/game
 		FileName = "Pengu Hub"
 	},
         Discord = {
-        	Enabled = false,
+        	Enabled = true,
         	Invite = "T5ww6Xb8hJ", -- The Discord invite code, do not include discord.gg/
         	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
         },
@@ -25,19 +24,20 @@ local MainWindow = Rayfield:CreateWindow({
 		Key = "Release"
 	}
 })
-local MainTab = MainWindow:CreateTab("Main", 4483362458) -- Title, Image
-local MainSection = MainTab:CreateSection("Main")
-local Button = MainTab:CreateButton({
-	Name = "Neon Tinter",
-	Callback = local carIsNeon = game:GetService("Workspace").Vehicles.Tinter.Color.Union.Material == "Neon"
+local Tab = MainWindow:CreateTab("Main", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Main")
+local Button = Tab:CreateButton({
+	Name = "Neon Tinter Loop",
+	Callback = function()
+		local carIsNeon = game:GetService("Workspace").Vehicles.Tinter.Color.Union.Material == "Neon"
  
-repeatLoop = true
-
-if repeatLoop == true then
-    repeat
-    workspace.Plots.Plot2.Objects:FindFirstChild("Tinter Spawner").Hitbox.Interact:FireServer()
-    wait(0.1)
-    until carIsNeon
-end
+		repeatLoop = true
+		
+		if repeatLoop == true then
+			repeat
+			workspace.Plots.Plot2.Objects:FindFirstChild("Tinter Spawner").Hitbox.Interact:FireServer()
+			wait(0.1)
+			until carIsNeon
+		end	-- The function that takes place when the button is pressed
 	end,
 })
