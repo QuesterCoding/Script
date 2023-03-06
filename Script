@@ -1,43 +1,56 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-local MainWindow = Rayfield:CreateWindow({
-	Name = "Main Window",
-	LoadingTitle = "Fluffing up the Penguin",
-	LoadingSubtitle = "by Pengu#6902",
-	ConfigurationSaving = {
-		Enabled = true,
-		FolderName = nil, -- Create a custom folder for your hub/game
-		FileName = "Pengu Hub"
-	},
-        Discord = {
-        	Enabled = true,
-        	Invite = "T5ww6Xb8hJ", -- The Discord invite code, do not include discord.gg/
-        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-        },
-	KeySystem = true, -- Set this to true to use our key system
-	KeySettings = {
-		Title = "Pengu Hub",
-		Subtitle = "Key System",
-		Note = "Join the discord (discord.gg/T5ww6Xb8hJ)",
-		FileName = "PenguKey",
-		SaveKey = false,
-		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-		Key = "Release"
-	}
+
+local Window = Rayfield:CreateWindow({
+   Name = "xq hub",
+   LoadingTitle = "xq on top nigga",
+   LoadingSubtitle = "by xqwcvz#0001",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "xq hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "BAfhabGN95", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "xq hub",
+      Subtitle = "Key System",
+      Note = "Join the discord (discord.gg/BAfhabGN95)",
+      FileName = "xqkey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "xqontop"
+   }
 })
-local Tab = MainWindow:CreateTab("Main", 4483362458) -- Title, Image
-local Section = Tab:CreateSection("Main")
-local Button = Tab:CreateButton({
-	Name = "Neon Tinter Loop",
-	Callback = function()
-		local carIsNeon = game:GetService("Workspace").Vehicles.Tinter.Color.Union.Material == "Neon"
- 
-		repeatLoop = true
-		
-		if repeatLoop == true then
-			repeat
-			workspace.Plots.Plot2.Objects:FindFirstChild("Tinter Spawner").Hitbox.Interact:FireServer()
-			wait(0.1)
-			until carIsNeon
-		end	-- The function that takes place when the button is pressed
+local opshitTab = Window:CreateTab("op shit for yall fags", 4483362458) -- Title, Image
+
+local gridironfootballSection = opshitTab:CreateSection("gridiron football")
+
+local Slider = opshitTab:CreateSlider({
+	Name = "JumpPower",
+	Range = {55, 75},
+	Increment = 1,
+	Suffix = "jp",
+	CurrentValue = 55,
+	Flag = "Slider1",
+	Callback = function(s)
+		game.Players.LocalPlayer.character.Humanoid.JumpPower = s
 	end,
 })
+
+local Slider2 = opshitTab:CreateSlider({
+	Name = "WalkSpeed",
+	Range = {22, 50},
+	Increment = 1,
+	Suffix = "jp",
+	CurrentValue = 22,
+	Flag = "Slider2",
+	Callback = function(s)
+		game.Players.LocalPlayer.character.Humanoid.WalkSpeed = s
+	end,
+})
+
+Rayfield:LoadConfiguration()
